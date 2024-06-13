@@ -1,0 +1,557 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+/*	box-sizing: border-box;*/
+}
+
+/* Veronica Hoyek 202011458 */
+
+@font-face { /*allows custom font to be loaded on the webpage*/
+    font-family: kor; /*custom name for the font*/
+    src: url("BlackHanSans-Regular.ttf") /*source of the font*/
+}
+
+body {
+	background-color: #f2d0a9;
+	font-family: carlmarx,sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden; /*so that it hides the overflow of content from left and right*/
+}
+
+#top {
+	width: 100%;
+	height: 4em;
+	margin-left: auto;
+	margin-right: auto; /*centring within the container*/
+    position: fixed; /*for it to still appear when scrolling*/
+    top: 0;
+    padding: 0.5em 0;
+    align-items: center;
+    z-index: 100;  /*for it to be placed on top of the objects that it is overlapping with*/
+	background-color: #f2d0a9;
+}  
+
+#top #title {
+    font-family: kor;
+	color: #000000;
+	font-size: 3em;
+	margin-left: 1%;
+	position: relative;
+    top: 5%;
+	text-decoration: none;
+}
+
+#top #img1 {
+	position: relative;
+	float: left;
+	width: 5em;
+	height: 4em;
+	margin-left: 5%;
+}
+
+#top #menu1{
+	position: relative;
+	float: right;
+	list-style-type: none;
+	margin-right: 5%;
+	margin-block-start: 0.875em; /*to change automatic values*/
+    margin-block-end: 0.875em;
+	width: 60%;
+	margin-left: 1em;
+	padding-inline-start: 0; /*to change automatic value*/
+}
+
+#top #menu1>li { /*takes effect on li only and not on all elements in it*/
+	position: relative;
+	float: left;
+	width: 18%;
+	text-align: center;
+	display: inline-block;
+	margin-left:0.5em;
+}
+
+#top #menu1 li a {
+	background-color: #D88C9A;
+	display: block;
+	border-radius: 0.5em;
+	padding: 0.8em 0;
+	font-size: 16px;
+	color: #000000;
+	text-decoration: none;
+	border: #000000 solid thin;
+}
+
+#top #menu1 li a:hover {
+	background-color: #F1E3D3;
+	text-decoration: none;
+}
+
+#top #menu1 li .sub {
+	list-style-type: none;
+	padding: 0;
+	position:absolute; /*menu sub elements shouldn't push the contents of the page when we hover over the li*/
+	z-index: 10; /*for it to be above the objects that it is overlapping*/
+	display: none; /*aren't always appearing*/
+	width: 100%;
+}
+
+#top #menu1 li:hover .sub {
+	display: block; /*they appear when we hover over the li*/
+}
+
+#content {
+	position: relative;
+	width: 100%;
+	height: 27em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#content #nav {
+	position: fixed; /*the nav on the left won't move even when we scroll to allow the user to access these pages even when he is not at the top of the page*/
+	width: 15%;
+	height: auto;
+	margin-left: 1em;
+	margin-top: 4em;
+}
+
+#content #nav #menu2 {
+	position: relative;
+	width: 100%;
+	list-style-type: none;
+	float: left;
+	padding: 0;
+	z-index: 10;
+	margin-top: 10%;
+	margin-bottom: 0;
+	height: 100%;
+}
+
+#content #nav #menu2 li {
+	position: relative;
+	float: left;
+	text-align: center;
+	margin-top: 5%;
+	width: 90%;
+}
+
+#content #nav #menu2 li a {
+	background-color: #99C1B9;
+	display: block; /*takes the whole width of the li*/
+	border-radius: 0.5em;
+	padding: 0.8em 0; /*center vertically*/
+	font-size: 0.8em;
+	color: #000000;
+	text-decoration: none;
+	border: #000000 solid thin;
+}
+
+#content #nav #menu2 li a:hover {
+	background-color: #F1E3D3;
+	text-decoration: none;
+}
+
+#content #left {
+	margin-top: 5em;
+	position: relative;
+	float: right;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	background-color: #F1E3D3;
+	border-radius: 0.5em;
+	width: 75%;
+	padding: 1em;
+	box-sizing: border-box; /*for width and height to include paddings and borders*/
+	height: 100%;
+	border: #000000 solid thin;
+	/*      color   style width*/
+	margin-right: 5%;
+}
+
+#content #left #txt {
+	position: relative;
+	font-size: 16px;
+}
+
+#content #left #txt p {
+	text-align: justify; /*aligned with both margins*/ 
+	margin-top: 0;
+}
+
+#awards a {
+	position: absolute;
+	bottom: 1.5em;
+	right: 0;
+}
+
+#content #left #img {
+	position: relative;
+	float: left;
+	height: 100%;
+	margin-right: 1em;
+}
+
+#content #left #img #img2 {
+	height:100%; /*width adjusts automatically to keep the proportions of the image*/
+	border-radius: 0.5em;
+}
+
+#content #left #awards a {
+	background-color: #99C1B9;
+	display: block;
+	height: 1em;
+	float: right;
+	border-radius: 0.5em;
+	padding: 0.8em 0;
+	font-size: 0.8em;
+	border: #000000 solid thin;
+	font-family: carlmarx,sans-serif;
+	text-align: center;
+	width: 20%;
+    margin-right: 4%;
+}
+
+#content #left #awards a {
+	text-decoration: none;
+	color: #000000;
+}
+
+#content #left #awards a:hover {
+	background-color: #D88C9A;
+	text-decoration: none;
+}
+
+#members2 { /*other version of the menu2 in the nav, the one on the right*/
+	width:100%;
+	display: none; /*display will change in the media query to display it at a specified max width, instead of the original menu*/
+}
+
+#members2 #menu22{
+	position: relative;
+	float: left;
+	list-style-type: none;
+	margin-left: 4.5%;
+	margin-block-start: 0; /*to change automatic values*/
+    margin-block-end: 0.875em;
+	width: 100%;
+	padding-inline-start: 0;
+}
+
+#members2 #menu22 li {
+	position: relative;
+	float: left;
+	width: 10%;
+	text-align: center;
+}
+
+#members2 #menu22 li a {
+	background-color: #99C1B9;
+	display: none;
+	border-radius: 0.5em;
+	padding: 0.8em 0;
+	font-size: 16px;
+	color: #000000;
+	text-decoration: none;
+	border: #000000 solid thin;
+	margin-left:0.5em;
+}
+
+#members2 #menu22 li a:hover {
+	background-color: #F1E3D3;
+	text-decoration: none;
+}
+
+#menuToggle
+{
+  display: none;  /*this is the burger button, not to be displayed except when the max-width is 600px*/
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  z-index: 1;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px; /*center the button on the burger*/
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /*hide the button but it is still there and working*/
+  z-index: 2;
+}
+
+#menuToggle span /*each line from the burger is a span*/
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #F1E3D3;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+#menu /* Make this absolute positioned at the top left of the screen */
+{
+  position: absolute;
+  width: 300px;
+  padding: 50px;
+  padding-top: 50px;
+  right: -100px;
+  display: none;
+  background: #D88C9A;
+  border-radius: 0.5em;
+  list-style-type: none;
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menu li a {
+	text-decoration: none;
+	color: #000000;
+	border-radius: 0.5em;
+}
+
+#menu li a:hover {
+	background-color: #F1E3D3;
+	text-decoration: none;
+}
+
+#menu li .sub {
+	list-style-type: none;
+	padding: 0;
+	position:relative;
+	display: none; /*sub elements of main menu elements aren't permenantly appearing*/
+	width: 100%;
+	border-radius: 0.5em;
+}
+
+#menu li:hover .sub {
+	display: block; /*only appears when we hover over the main menu element*/
+}
+
+#menuToggle input:checked ~ ul /*when we click the burger the menu will no longer be hidden*/
+{
+  opacity: 1;
+  display:block;
+}
+
+.footer {
+    position: relative;
+    width: 70%;
+    height: 5em;
+    text-align: center;
+    top: 1em;
+	float:left;
+	margin-left: 15%; /*to center the footer, 30% of the width are left so it must be divided by 2 each side*/
+	color: #000;
+	padding-top: 1em;
+}
+.footer a{ /*contact us button*/
+  color: #000;
+  text-decoration: none;
+}
+
+
+@media only screen and (max-width:1300px){
+	body {
+	font-size: 19px;
+	}
+	#top #menu1 {
+	width: 55%;
+	}
+	#content #left #txt {
+	font-size: 14px;
+	}
+	#content #left  {
+	height: 90%;
+	}
+	#content #nav #menu2  {
+	height: 90%;
+	}
+}
+
+@media only screen and (max-width:1200px){
+	body {
+	font-size: 18px;
+	}
+	#content #left #txt {
+	font-size: 12.5px;
+	}
+	#content #left  {
+	height: 80%;
+	}
+	#content #nav #menu2  {
+	height: 80%;
+	}
+	#content #nav #menu2 li {
+	margin-top: 2%;
+	}
+}
+
+@media only screen and (max-width:1000px){
+	body {
+	font-size: 17px;
+	}
+	#top #menu1  {
+	width: 51%;
+	}
+	#top #menu1 li a {
+	font-size: 14px;
+	}
+	#members2 {
+	display: block; /*displaying the alternate menu*/
+	}
+	#content {
+	margin-left: 5%;
+	width: 90%;
+	margin-right: 5%;
+	margin-top: 5em;
+	height: 25em;
+	}
+	#content #left {
+	height: 100%;
+	width: 100%;
+	margin: 1em 0 0 0;
+	}
+	#content #nav { /*hiding the original menu*/
+	display: none;
+	}
+	#members2 #menu22 li a {
+	display: block;
+	}
+}
+@media only screen and (max-width:850px){
+	body {
+	font-size: 15px;
+	}
+	#content #left #txt {
+	font-size: 11px;
+	}
+	#content #nav #menu2  {
+	height: 90%;
+	}
+	#members2 #menu22 li a {
+	font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+  #menu {
+  transform: none;
+  opacity: 0;
+  }
+}
+
+@media only screen and (max-width:760px){
+	body {
+	font-size: 13px;
+	}
+	#top #menu1 li a {
+	font-size: 12px;
+	}
+	#content #left #txt {
+	font-size: 10px;
+	}
+	#members2 #menu22 li a {
+	font-size: 13px;
+	}
+}
+
+@media only screen and (max-width:650px){
+	body {
+	font-size: 11px;
+	}
+	#top #menu1 {
+	width: 55%;
+	}
+	#top #menu1>li{
+	width: 18%;
+	}
+	#members2 #menu22 li a {
+	font-size: 12.5px;
+	}
+}
+
+@media only screen and (max-width:600px){
+	body {
+	font-size: 15px;
+	}
+	#top {
+	height: 12%;
+	overflow: auto;
+	margin-top: 0;
+    padding: 1em 0;
+    align-items: center;
+	}  
+	#menuToggle { /*display burger button*/
+	display: block;
+	position: fixed;
+	z-index: 100;
+	}
+	#menu {
+	margin-right: 100px;
+	margin-top: 10px;
+	}
+	#top #img1 {
+	position: relative;
+	width: 30%;
+	margin-left:5%;
+	}
+	#top #title {
+	top: 10%;
+	}
+	#top #menu1 li a { /*the menu dissapears, the burger now represents it so this should be display none*/
+	display: none;
+	}
+	
+	#content #left {
+	width: 95%;
+	margin-left:2.5%;
+	margin-right:2.5%;
+	height: auto;
+	overflow: auto;
+	margin-top: 2em;
+	}
+	#content #left #img {
+	width:100%;
+	}
+	#content #left #img #img2 {
+	width:100%;
+	}
+	#members2 #menu22 li a {
+	display: none;
+	}	
+	#content #left #txt {
+	font-size: 16px;
+	}
+	#awards a {
+	right: 35%;
+	height: 100%;
+	}
+	#awards{
+	font-size: 15px;
+	height: 3em;
+	}
+	
+	#content #left #awards a {
+	height: 2em;
+	}
+	#footer {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	}
+}
+	
